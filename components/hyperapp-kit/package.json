@@ -1,0 +1,7 @@
+{
+  "name": "components-hyperapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "o.drapeza <o.drapeza@tinkoff.ru>",
+  "license": "MIT"
+}

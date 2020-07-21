@@ -1,0 +1,21 @@
+{
+  "name": "adapters-preact-to-react",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "author": "o.drapeza <o.drapeza@tinkoff.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "microbundle watch",
+    "build": "microbundle"
+  },
+  "devDependencies": {
+    "microbundle": "^0.12.3"
+  },
+  "dependencies": {
+    "preact": "^10.4.6",
+    "preact-render-to-string": "^5.1.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

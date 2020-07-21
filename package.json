@@ -1,0 +1,13 @@
+{
+  "name": "agnostic-kit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "o.drapeza <o.drapeza@tinkoff.ru>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "components/*",
+    "adapters/*"
+  ]
+}

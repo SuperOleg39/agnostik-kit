@@ -1,0 +1,19 @@
+{
+  "name": "components-stencil",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "author": "o.drapeza <o.drapeza@tinkoff.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "microbundle watch",
+    "build": "microbundle"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.5.2"
+  },
+  "devDependencies": {
+    "microbundle": "^0.12.3"
+  }
+}

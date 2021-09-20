@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from 'react';
-import { createPreactAdapter } from 'adapters-preact-to-react';
-import { Button, Link, Div } from 'components-preact';
+import { createStencilAdapter } from 'adapters-stencil-to-react';
+// import { StencilKitButton, StencilKitLink, StencilKitDiv } from 'stencil-kit-2/react/src/components';
 import logo from './logo.svg';
 import './App.css';
 
-const AdaptedButton = createPreactAdapter(Button);
-const AdaptedLink = createPreactAdapter(Link);
-const AdaptedDiv = createPreactAdapter(Div);
+const AdaptedButton = createStencilAdapter('stencil-kit-button');
+const AdaptedLink = createStencilAdapter('stencil-kit-link');
+const AdaptedDiv = createStencilAdapter('stencil-kit-div');
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,6 +30,9 @@ function App() {
           Learn React
         </a>
 
+        {/* eslint-disable-next-line */}
+        <a href="#" onClick={handleClick}>clicked {count} times</a>
+
         <AdaptedButton type="button" onClick={handleClick} children={`clicked ${count} times`} />
 
         <AdaptedButton type="button" onClick={handleClick}>
@@ -41,29 +44,27 @@ function App() {
         </AdaptedButton>
 
         <AdaptedDiv onClick={handleClick}>
-          {() => (
-            <>
-              <AdaptedLink href="#">
-                clicked {count} times
-              </AdaptedLink>
-              <AdaptedButton type="button" onClick={handleClick}>
-                {() => (
-                  <>
-                    <AdaptedLink href="#">
-                      <p>clicked {count} times</p>
-                    </AdaptedLink>
-                  </>
-                )}
-              </AdaptedButton> 
-            </>
-          )}
+          <>
+            <AdaptedLink href="#">
+              clicked {count} times
+            </AdaptedLink>
+            <AdaptedButton type="button" onClick={handleClick}>
+              <>
+                <AdaptedLink href="#">
+                  <p>clicked {count} times</p>
+                </AdaptedLink>
+              </>
+            </AdaptedButton> 
+          </>
         </AdaptedDiv>
 
         <AdaptedButton type="button" onClick={handleClick}>
+          {/* eslint-disable-next-line */}
           <a href="#">clicked {count} times</a>
         </AdaptedButton>
 
         <AdaptedDiv onClick={handleClick}>
+          {/* eslint-disable-next-line */}
           <a href="#">clicked {count} times</a>
           <AdaptedButton type="button" onClick={handleClick}>
             <AdaptedLink href="#">clicked {count} times</AdaptedLink>

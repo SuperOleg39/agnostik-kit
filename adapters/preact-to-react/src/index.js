@@ -34,7 +34,7 @@ export function createPreactAdapter(Component, tag = 'span', style = {}) {
         }
       }
       // @todo destroy
-    }, [...props]);
+    }, [...Object.keys(props), ...Object.values(props)]);
 
     return React.createElement(tag, { ref: rootRef, style });
   }

@@ -1,0 +1,6 @@
+{
+  "name": "stencil-kit-2/hydrate",
+  "description": "StencilKit2 component hydration app.",
+  "main": "index.js",
+  "types": "index.d.ts"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "adapters-stencil-to-react/hydrate",
+  "main": "index.js",
+  "types": "index.d.ts"
+}
